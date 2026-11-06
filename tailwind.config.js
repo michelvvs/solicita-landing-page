@@ -1,45 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
+        // Paleta da marca Solicita
         brand: {
-          dark: '#29235C',        // Cor 1: #29235C
-          primary: '#2d2e83',     // Cor 2: #2d2e83
-          accent: '#1d71b8',      // Cor 3: #1d71b8
-          light: '#eef6fc',
-          muted: '#8b93bb',
-          surface: '#1e1948',
-          card: '#161338',
-          highlight: '#38bdf8'
-        }
+          dark: '#29235C',
+          primary: '#2d2e83',
+          accent: '#1d71b8',
+        },
+        // Neutros do sistema visual (papel + tinta, com leve viés azulado)
+        paper: '#F6F5F1',
+        sheet: '#FFFFFF',
+        ink: '#17163A',
+        mute: '#5B5A76',
+        rule: '#DCDAE6',
+        tint: '#E9F0F8',
+        // Severidade dos achados do Dossiê 360°
+        sev: {
+          critico: '#B42318',
+          alto: '#C2570C',
+          medio: '#A16207',
+          baixo: '#2F7D4F',
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Newsreader', 'Georgia', 'serif'],
+        sans: ['"Public Sans"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
-      boxShadow: {
-        'glow': '0 0 35px -5px rgba(29, 113, 184, 0.35)',
-        'glow-primary': '0 0 35px -5px rgba(45, 46, 131, 0.45)',
-        'glow-accent': '0 0 25px rgba(29, 113, 184, 0.5)',
+      maxWidth: {
+        page: '1200px',
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+      borderRadius: {
+        DEFAULT: '4px',
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        pulseSubtle: {
-          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
-          '50%': { opacity: '0.92', transform: 'scale(1.02)' },
-        }
-      }
     },
   },
   plugins: [],
