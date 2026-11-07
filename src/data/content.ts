@@ -72,7 +72,7 @@ export const PRODUCTS = [
     tag: 'Vendas e marketing',
     text: 'Pipeline de vendas, gestão de leads e planejamento de marketing em um só lugar, com IA para pontuar leads, sugerir a próxima ação e planejar conteúdo e campanhas.',
     points: ['Kanban de vendas com score de leads por IA', 'Calendário editorial e publicação no Instagram', 'Planejador de tráfego pago com CPL, CAC e ROAS'],
-    img: null,
+    img: '/produtos/solicrm-pipeline.jpg',
     url: 'SoliCRM',
     cta: { label: 'Quero conhecer o SoliCRM', subject: 'SoliCRM' },
     hue: 'fuchsia',

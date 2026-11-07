@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight, CheckCircle, PaperPlaneTilt } from '../components/icons';
-import { CrmMock } from '../components/CrmMock';
 import { Reveal } from '../components/motion';
 import { SectionHead } from '../components/SectionHead';
 import { BrowserFrame, HUES } from '../components/ui';
@@ -38,7 +37,7 @@ export function Solucoes({ onChoose }: { onChoose: (subject: string) => void }) 
                   <div className="relative">
                     <div aria-hidden className={cn('absolute -inset-3 rounded-2xl bg-gradient-to-br opacity-80 blur-xl', BG[p.hue])} />
                     <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.3 }} className="relative">
-                      {p.img ? <BrowserFrame src={p.img} alt={`${p.name}: tela do sistema`} url={p.url} /> : <CrmMock />}
+                      <BrowserFrame src={p.img} alt={`${p.name}: tela do sistema`} url={p.url} />
                     </motion.div>
                   </div>
                 </Reveal>
