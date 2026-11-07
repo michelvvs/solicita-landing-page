@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { CheckCircle2, Send } from 'lucide-react';
+import { CheckCircle, PaperPlaneTilt } from '../components/icons';
+import { TimelineIllustration } from '../components/Illustrations';
+import { Reveal } from '../components/motion';
 import { WHATSAPP_NUMBER } from '../data/content';
 
 const SUBJECTS = [
@@ -54,7 +56,7 @@ export function Contato({ subject }: { subject: string }) {
   };
 
   return (
-    <section id="contato" className="relative overflow-hidden bg-brand-dark py-24 text-white sm:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-[#2a2b88] to-[#17508f] py-24 text-white sm:py-32">
       <div
         aria-hidden
         className="mark-s pointer-events-none absolute -right-28 -top-20 h-[460px] w-[460px] text-white/[0.05]"
@@ -67,7 +69,7 @@ export function Contato({ subject }: { subject: string }) {
             <span>Contato</span>
           </p>
           <h2 className="mt-4 text-[36px] leading-[1.1] text-white sm:text-[46px]">
-            Conte qual é o seu próximo edital.
+            Conte qual é o seu próximo <span className="underline decoration-aqua decoration-4 underline-offset-[6px]">edital</span>.
           </h2>
           <p className="mt-5 max-w-md text-[17px] leading-relaxed text-white/75">
             Fale com a equipe da Solicita para conhecer o SOL, pedir um Dossiê 360° ou conversar sobre um certame
@@ -77,12 +79,15 @@ export function Contato({ subject }: { subject: string }) {
             <li>Atendimento para empresas de todo o território nacional.</li>
             <li>Seus documentos e estratégias ficam sob sigilo.</li>
           </ul>
+          <Reveal className="mt-10 hidden max-w-sm lg:block">
+            <TimelineIllustration className="w-full" />
+          </Reveal>
         </div>
 
         <div className="lg:col-span-7">
           {sent ? (
             <div role="status" className="rounded-md bg-white p-8 text-ink sm:p-10">
-              <CheckCircle2 className="h-9 w-9 text-sev-baixo" aria-hidden />
+              <CheckCircle size={40} weight="duotone" className="text-sev-baixo" aria-hidden />
               <h3 className="mt-4 text-[28px] text-brand-dark">Mensagem preparada</h3>
               <p className="mt-2 max-w-md text-[15.5px] leading-relaxed text-mute">
                 Abrimos o WhatsApp com os seus dados. Se a janela não abriu, verifique o bloqueador de pop-ups e envie
@@ -130,7 +135,7 @@ export function Contato({ subject }: { subject: string }) {
                 </div>
               </div>
               <button type="submit" className="btn-primary mt-7 w-full sm:w-auto">
-                <Send className="h-4 w-4" aria-hidden /> Enviar pelo WhatsApp
+                <PaperPlaneTilt size={18} weight="fill" aria-hidden /> Enviar pelo WhatsApp
               </button>
             </form>
           )}

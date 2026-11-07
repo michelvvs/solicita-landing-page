@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'motion/react';
 import { NAV } from '../data/content';
 import { cn } from '../lib/cn';
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -27,6 +30,7 @@ export function Header() {
       >
         Ir para o conteúdo
       </a>
+      <motion.div aria-hidden style={{ scaleX: progress }} className="absolute inset-x-0 top-0 h-[3px] origin-left bg-gradient-to-r from-violet via-brand-accent to-aqua" />
       <div className="wrap flex h-16 items-center justify-between gap-6">
         <a href="#topo" aria-label="Solicita — início" className="shrink-0">
           <img src="/logo-horizontal.png" alt="Solicita — Soluções em Licitações Públicas" className="h-9 w-auto" />

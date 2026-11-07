@@ -12,6 +12,11 @@ export default {
         },
         // Neutros do sistema visual (papel + tinta, com leve viés azulado)
         paper: '#F6F5F1',
+        // Cores análogas ao azul-índigo da marca (violeta ← índigo → azul → ciano)
+        violet: { DEFAULT: '#6D4FE0', soft: '#ECE8FC' },
+        aqua: { DEFAULT: '#17AFCB', soft: '#DAF4F9' },
+        ice: '#E3F1FB',
+        lilac: '#F0EDFC',
         sheet: '#FFFFFF',
         ink: '#17163A',
         mute: '#5B5A76',
@@ -29,6 +34,16 @@ export default {
         display: ['Newsreader', 'Georgia', 'serif'],
         sans: ['"Public Sans"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
+      keyframes: {
+        float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+        pan: { '0%,8%': { transform: 'translateX(0)' }, '50%,58%': { transform: 'translateX(var(--pan, -40%))' }, '100%': { transform: 'translateX(0)' } },
+        draw: { to: { strokeDashoffset: '0' } },
+      },
+      animation: {
+        float: 'float 7s ease-in-out infinite',
+        'float-slow': 'float 10s ease-in-out infinite',
+        pan: 'pan 22s ease-in-out infinite',
       },
       maxWidth: {
         page: '1200px',

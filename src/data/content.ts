@@ -260,3 +260,27 @@ export const FAQ = [
     a: 'As duas formas existem: o Dossiê avulso, sob demanda, e o SOL Pro, mensal, para quem disputa muitas licitações. Há ainda a consultoria com acompanhamento direto da equipe Solicita.',
   },
 ];
+
+export const STAGE_INFO: Record<number, string> = {
+  1: 'Você valida os dados extraídos do edital: contratante, objeto, datas e valores.',
+  2: 'O Dossiê 360° fica pronto e você valida a análise.',
+  3: 'Decisão de participar. NO-GO encerra o card; sessão sem decisão vira "não participou".',
+  4: 'Pedidos protocolados no prazo e no canal do edital, ou o registro de que não haverá pedidos.',
+  5: 'Respostas do órgão anexadas e analisadas pela IA. Sem pedidos, a etapa é pulada.',
+  6: 'Proposta registrada e lotes escolhidos. Prazo vencido sem proposta vira "não participou".',
+  7: 'Piso e teto calculados com a inexequibilidade do edital. O card aguarda a data e a hora da sessão.',
+  8: 'Valor final, colocação e concorrentes registrados. Cada lote segue a sua trilha.',
+  9: 'Quem não venceu decide se recorre, com as razões. O 1º lugar pula a etapa.',
+  10: 'Quem venceu informa se houve recurso e anexa recurso e contrarrazão.',
+  11: 'Decisão do órgão anexada e analisada. Decisão desfavorável encerra como perdida.',
+  12: 'Contrato anexado e comparado pela IA com a minuta, com a data de assinatura.',
+  13: 'Entrega registrada e validada: o card encerra como ganho. Em ata de registro de preços, acompanha cada solicitação.',
+};
+
+export const TOUR = [
+  { src: '/sol/sol-licitacoes.jpg', title: 'Todas as licitações num só lugar', text: 'Visão geral com o status do Dossiê, o score, o veredito e o andamento no LicitaPlanner de cada certame.' },
+  { src: '/sol/sol-dossie.jpg', title: 'Score e parecer em destaque', text: 'Nota de 0 a 10, contagem de achados por gravidade e a recomendação validada por um especialista.' },
+  { src: '/sol/sol-achados.jpg', title: 'Achados com documento, item e página', text: 'Cada achado traz o trecho literal do edital, o impacto no certame e a ação recomendada.' },
+  { src: '/sol/sol-card.jpg', title: 'Um card para cada licitação', text: 'Prazos do edital, decisões, anexos e a etapa atual em um único lugar, com histórico de tudo o que aconteceu.' },
+  { src: '/sol/sol-panorama.jpg', title: 'Panorama dos resultados', text: 'Taxa de vitória, valor ganho e colocação, inclusive por lote.' },
+];
