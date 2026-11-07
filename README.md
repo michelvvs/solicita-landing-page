@@ -38,3 +38,12 @@ public/               logos (horizontal e quadrada) e sol/ (capturas do ambiente
 - Trocar `WHATSAPP_NUMBER` (hoje um número de exemplo) em `src/data/content.ts`.
 - Confirmar `SOL_URL` (hoje `https://sol.solicita.net`) e os valores em `OFFERS`.
 - Confirmar quais agentes de IA (`AGENTS`) já estão disponíveis.
+
+## Deploy (VPS)
+
+Mesmo padrão dos outros sites do VPS: container nginx `solicita-site-1` em `/opt/solicita-site`, sem portas publicadas, atrás do Caddy compartilhado em `/opt/proxy` (blocos `solicita.net` e `www.solicita.net`). O DNS fica na Hostinger (registro A de `solicita.net` e `www` para o IP do VPS).
+
+```bash
+rsync -az --delete --exclude node_modules --exclude dist --exclude .git --exclude .claude ./ vps:/opt/solicita-site/
+ssh vps 'cd /opt/solicita-site && docker compose up -d --build'
+```

@@ -1,0 +1,18 @@
+# Site institucional da Solicita no VPS, sem publicar portas: o proxy reverso
+# compartilhado (Caddy em /opt/proxy) acessa pela rede do proxy com o apelido "solicita-site".
+#   docker compose up -d --build
+services:
+  web:
+    build: .
+    image: solicita-site:latest
+    container_name: solicita-site-1
+    restart: unless-stopped
+    networks:
+      default: {}
+      proxy:
+        aliases: [solicita-site]
+
+networks:
+  proxy:
+    name: ${PROXY_NETWORK:-precigasmed_default}
+    external: true
