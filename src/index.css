@@ -39,9 +39,9 @@
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-[15px] font-semibold transition-colors duration-150;
   }
-  /* CTA de conversão: laranja-sol, cor complementar ao azul da marca (máximo contraste) */
+  /* CTA principal do institucional: navy sólido, sem brilho */
   .btn-cta {
-    @apply btn animate-pulsering rounded-lg bg-gradient-to-r from-sun to-ember px-7 py-4 text-[16px] font-bold text-[#2a1200] shadow-[0_12px_30px_-10px_rgba(255,122,26,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0;
+    @apply btn rounded-md bg-brand-dark px-6 py-3.5 text-[15px] text-white shadow-[0_10px_24px_-12px_rgba(41,35,92,0.8)] hover:-translate-y-0.5 hover:bg-brand-primary;
   }
   .btn-primary {
     @apply btn bg-gradient-to-r from-brand-dark to-brand-primary text-white shadow-[0_8px_20px_-8px_rgba(45,46,131,0.7)] hover:from-brand-primary hover:to-brand-accent;

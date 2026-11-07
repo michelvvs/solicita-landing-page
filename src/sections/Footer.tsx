@@ -9,7 +9,7 @@ export function Footer() {
           <p className="mt-6 max-w-sm text-[14.5px] leading-relaxed">Quase duas décadas de experiência em licitações públicas, transformadas em sistemas com IA e em soluções sob medida.</p>
         </div>
         <nav aria-label="Rodapé" className="md:col-span-3">
-          <p className="font-mono text-[12px] uppercase tracking-wider text-sun">Navegação</p>
+          <p className="font-mono text-[12px] uppercase tracking-wider text-sky-300">Navegação</p>
           <ul className="mt-4 space-y-2.5 text-[14.5px]">
             {NAV.map((n) => (
               <li key={n.href}><a href={n.href} className="hover:text-white">{n.label}</a></li>
@@ -17,7 +17,7 @@ export function Footer() {
           </ul>
         </nav>
         <div className="md:col-span-4">
-          <p className="font-mono text-[12px] uppercase tracking-wider text-sun">Soluções</p>
+          <p className="font-mono text-[12px] uppercase tracking-wider text-sky-300">Soluções</p>
           <ul className="mt-4 space-y-2.5 text-[14.5px]">
             <li><a href={SOL_LANDING_URL} target="_blank" rel="noreferrer" className="hover:text-white">SOL, planos e valores</a></li>
             <li><a href="#solicrm" className="hover:text-white">SoliCRM</a></li>

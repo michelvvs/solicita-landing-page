@@ -37,8 +37,7 @@ export function Contato({ subject }: { subject: string }) {
   };
 
   return (
-    <section id="contato" className="relative overflow-hidden bg-[linear-gradient(135deg,#17124a_0%,#2d2e83_50%,#5b3fd0_100%)] py-24 text-white sm:py-32">
-      <div aria-hidden className="absolute -left-32 top-10 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-sun/80 to-ember/50 opacity-70" />
+    <section id="contato" className="relative overflow-hidden bg-brand-dark py-24 text-white sm:py-32">
       <div aria-hidden className="mark-s pointer-events-none absolute -right-24 -top-16 h-[460px] w-[460px] text-white/[0.05]" />
       <div className="wrap relative grid items-start gap-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
@@ -48,7 +47,7 @@ export function Contato({ subject }: { subject: string }) {
             <span>Contato</span>
           </p>
           <h2 className="mt-4 text-[36px] leading-[1.08] sm:text-[48px]">
-            Vamos conversar sobre o que a sua empresa <span className="underline decoration-sun decoration-4 underline-offset-[6px]">precisa</span>.
+            Vamos conversar sobre o que a sua empresa <span className="underline decoration-aqua decoration-4 underline-offset-[6px]">precisa</span>.
           </h2>
           <p className="mt-5 max-w-md text-[17px] leading-relaxed text-white/85">
             Conhecer um dos nossos sistemas ou desenhar uma solução do zero: o primeiro passo é uma conversa. O atendimento continua pelo WhatsApp.

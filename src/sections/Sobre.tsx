@@ -63,7 +63,7 @@ export function Sobre() {
             <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-brand-dark via-brand-primary to-[#3b3fa8] p-8 text-white sm:p-10">
               <div aria-hidden className="mark-s pointer-events-none absolute -right-20 -top-16 h-[340px] w-[340px] text-white/[0.06]" />
               <DocsIllustration className="relative mx-auto w-full max-w-[340px]" />
-              <Quotes size={34} weight="fill" className="relative mt-6 text-sun" aria-hidden />
+              <Quotes size={34} weight="fill" className="relative mt-6 text-aqua" aria-hidden />
               <blockquote className="relative mt-2 font-display text-[25px] leading-[1.25] sm:text-[28px]">
                 Tecnologia, sozinha, não resolve problemas. Ela precisa ser construída por quem conhece profundamente a realidade do mercado.
               </blockquote>
@@ -96,8 +96,8 @@ export function Valores() {
           <Reveal>
             <article className="relative h-full overflow-hidden rounded-2xl bg-gradient-to-br from-brand-dark via-brand-primary to-[#4a37c0] p-8 text-white sm:p-10">
               <div aria-hidden className="mark-s pointer-events-none absolute -right-14 -top-10 h-56 w-56 text-white/[0.07]" />
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-sun"><Target size={28} weight="duotone" /></span>
-              <p className="mt-5 font-mono text-[12px] uppercase tracking-wider text-sun">Missão</p>
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-sky-300"><Target size={28} weight="duotone" /></span>
+              <p className="mt-5 font-mono text-[12px] uppercase tracking-wider text-sky-300">Missão</p>
               <p className="mt-2 font-display text-[26px] leading-snug sm:text-[30px]">{MISSION.mission}</p>
             </article>
           </Reveal>
@@ -117,7 +117,7 @@ export function Valores() {
               <ol className="mt-5 space-y-4">
                 {GOALS.map((g, i) => (
                   <li key={g} className="flex gap-3.5">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sun to-ember font-display text-[15px] font-semibold text-[#2a1200]">{i + 1}</span>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-primary font-display text-[15px] font-semibold text-white">{i + 1}</span>
                     <span className="text-[15.5px] leading-snug text-ink/85">{g}</span>
                   </li>
                 ))}

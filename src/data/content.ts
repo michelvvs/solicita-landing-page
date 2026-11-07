@@ -19,15 +19,6 @@ export const NAV = [
   { label: 'Dúvidas', href: '#duvidas' },
 ];
 
-export const TICKER = [
-  'Soluções em licitações públicas',
-  'SOL: o agente licitatório com IA',
-  'SoliCRM: CRM e marketing com IA',
-  'Precigasmed: precificação de gases medicinais',
-  'Soluções sob medida para a sua empresa',
-  'Quase 20 anos de experiência prática',
-];
-
 export const NUMBERS = [
   { to: 20, prefix: '~', unit: 'anos', label: 'de pregões e concorrências públicas no currículo do fundador' },
   { to: 3, prefix: '', unit: 'sistemas', label: 'próprios: SOL, SoliCRM e Precigasmed' },

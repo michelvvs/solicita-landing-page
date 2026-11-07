@@ -9,7 +9,7 @@ import { cn } from '../lib/cn';
 
 const BG: Record<string, string> = {
   violet: 'from-violet/60 via-brand-accent/40 to-aqua/40',
-  fuchsia: 'from-fuchsia/50 via-violet/40 to-sun/40',
+  fuchsia: 'from-fuchsia/35 via-violet/30 to-brand-accent/30',
   aqua: 'from-aqua/60 via-brand-accent/40 to-violet/40',
 };
 
