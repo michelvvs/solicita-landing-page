@@ -1,8 +1,6 @@
 # Solicita — site institucional
 
-Site institucional da **Solicita — Soluções em Licitações Públicas**, com ênfase no **SOL — Sistema de Operações em Licitação** (ferramentas **Dossiê 360°** e **LicitaPlanner**).
-
-Um site separado detalhará tudo o que o SOL faz; aqui o sistema aparece como resumo e porta de entrada (`SOL_URL` em `src/data/content.ts`).
+O site fala da empresa (história, missão, visão, valores e objetivos), das soluções (SOL, SoliCRM, Precigasmed) e dos projetos sob medida. Planos, valores e o passo a passo do SOL ficam na landing do sistema (`sol-landing-page`, `sol.landing.solicita.net`).
 
 ## Rodar
 

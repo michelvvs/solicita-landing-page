@@ -15,6 +15,10 @@ export default {
         // Cores análogas ao azul-índigo da marca (violeta ← índigo → azul → ciano)
         violet: { DEFAULT: '#6D4FE0', soft: '#ECE8FC' },
         aqua: { DEFAULT: '#17AFCB', soft: '#DAF4F9' },
+        // Acentos quentes (complementares ao azul): CTAs e o "sol" do SOL
+        fuchsia: { DEFAULT: '#D13FB0', soft: '#FBE8F6' },
+        sun: '#FFB62E',
+        ember: '#FF7A1A',
         ice: '#E3F1FB',
         lilac: '#F0EDFC',
         sheet: '#FFFFFF',
@@ -39,11 +43,19 @@ export default {
         float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
         pan: { '0%,8%': { transform: 'translateX(0)' }, '50%,58%': { transform: 'translateX(var(--pan, -40%))' }, '100%': { transform: 'translateX(0)' } },
         draw: { to: { strokeDashoffset: '0' } },
+        marquee: { to: { transform: 'translateX(-50%)' } },
+        spin: { to: { transform: 'rotate(360deg)' } },
+        pulsering: { '0%': { boxShadow: '0 0 0 0 rgba(255,122,26,.55)' }, '70%,100%': { boxShadow: '0 0 0 18px rgba(255,122,26,0)' } },
+        blink: { '0%,100%': { opacity: 1 }, '50%': { opacity: 0 } },
       },
       animation: {
         float: 'float 7s ease-in-out infinite',
         'float-slow': 'float 10s ease-in-out infinite',
         pan: 'pan 22s ease-in-out infinite',
+        marquee: 'marquee 38s linear infinite',
+        'spin-slow': 'spin 40s linear infinite',
+        pulsering: 'pulsering 2.2s ease-out infinite',
+        blink: 'blink 1s steps(2) infinite',
       },
       maxWidth: {
         page: '1200px',

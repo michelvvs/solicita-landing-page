@@ -2,13 +2,15 @@ import type { Icon } from '@phosphor-icons/react';
 import { cn } from '../lib/cn';
 import { LazyImage } from './motion';
 
-export type Hue = 'violet' | 'indigo' | 'blue' | 'aqua';
+export type Hue = 'violet' | 'indigo' | 'blue' | 'aqua' | 'fuchsia' | 'sun';
 
 export const HUES: Record<Hue, { chip: string; text: string; bar: string; ring: string; soft: string }> = {
   violet: { chip: 'bg-violet-soft text-violet', text: 'text-violet', bar: 'bg-violet', ring: 'ring-violet/25', soft: 'bg-lilac' },
   indigo: { chip: 'bg-brand-primary/10 text-brand-primary', text: 'text-brand-primary', bar: 'bg-brand-primary', ring: 'ring-brand-primary/25', soft: 'bg-brand-primary/[0.06]' },
   blue: { chip: 'bg-ice text-brand-accent', text: 'text-brand-accent', bar: 'bg-brand-accent', ring: 'ring-brand-accent/25', soft: 'bg-ice' },
   aqua: { chip: 'bg-aqua-soft text-[#0e8aa3]', text: 'text-[#0e8aa3]', bar: 'bg-aqua', ring: 'ring-aqua/30', soft: 'bg-aqua-soft' },
+  fuchsia: { chip: 'bg-fuchsia-soft text-fuchsia', text: 'text-fuchsia', bar: 'bg-fuchsia', ring: 'ring-fuchsia/25', soft: 'bg-fuchsia-soft' },
+  sun: { chip: 'bg-[#FFF1D6] text-[#B86A00]', text: 'text-[#B86A00]', bar: 'bg-sun', ring: 'ring-sun/30', soft: 'bg-[#FFF6E3]' },
 };
 
 /** Ícone duotone em um chip colorido. */

@@ -8,19 +8,15 @@ export function Faq() {
     <section className="bg-gradient-to-b from-paper to-ice/70 py-24 sm:py-32">
       <div className="wrap grid gap-14 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <SectionHead index="07" label="Dúvidas" title={<>Perguntas <span className="marker">frequentes</span>.</>} />
+          <SectionHead index="05" label="Dúvidas" title={<>Perguntas <span className="marker">frequentes</span>.</>} />
           <p className="mt-6 text-[15px] text-mute">
             Não encontrou o que procurava?{' '}
-            <a href="#contato" className="font-semibold text-brand-accent underline underline-offset-4">
-              Fale com a equipe
-            </a>
-            .
+            <a href="#contato" className="font-semibold text-brand-accent underline underline-offset-4">Fale com a equipe</a>.
           </p>
         </div>
-
         <Accordion.Root type="single" collapsible defaultValue="item-0" className="lg:col-span-8">
           {FAQ.map((f, i) => (
-            <Accordion.Item key={f.q} value={`item-${i}`} className="mb-3 rounded-lg bg-white px-5 ring-1 ring-rule data-[state=open]:ring-violet/40">
+            <Accordion.Item key={f.q} value={`item-${i}`} className="mb-3 rounded-xl bg-white px-5 ring-1 ring-rule data-[state=open]:ring-violet/40">
               <Accordion.Header>
                 <Accordion.Trigger className="group flex w-full items-center justify-between gap-6 py-5 text-left">
                   <span className="font-display text-[21px] leading-snug text-brand-dark">{f.q}</span>

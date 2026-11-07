@@ -39,11 +39,18 @@
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-[15px] font-semibold transition-colors duration-150;
   }
+  /* CTA de conversão: laranja-sol, cor complementar ao azul da marca (máximo contraste) */
+  .btn-cta {
+    @apply btn animate-pulsering rounded-lg bg-gradient-to-r from-sun to-ember px-7 py-4 text-[16px] font-bold text-[#2a1200] shadow-[0_12px_30px_-10px_rgba(255,122,26,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-105 active:translate-y-0;
+  }
   .btn-primary {
     @apply btn bg-gradient-to-r from-brand-dark to-brand-primary text-white shadow-[0_8px_20px_-8px_rgba(45,46,131,0.7)] hover:from-brand-primary hover:to-brand-accent;
   }
   .btn-secondary {
     @apply btn border border-brand-dark/25 text-brand-dark hover:border-brand-dark hover:bg-white;
+  }
+  .btn-ghost-light {
+    @apply btn border border-white/40 text-white hover:border-white hover:bg-white/10;
   }
   .btn-light {
     @apply btn bg-white text-brand-dark hover:bg-tint;
